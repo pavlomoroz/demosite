@@ -7,10 +7,5 @@ pipeline {
                 sh 'cp ./* /var/www/html/'
             }
         }
-        stage('cleanup') {
-            // Recursively delete all files and folders in the workspace
-            // using the built-in pipeline command
-            deleteDir()
-        }
     }
 }
